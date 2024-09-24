@@ -1,0 +1,395 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trading House Altair'</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="{% static 'css/temprorary/style.css' %}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="adaptive-header-block --hide --show820-flex">
+        <div class="header-logo-block" style="padding: 0 !important;">
+            <a class="header-logo-link" href="#">
+                <img class="header-logo" src="{% static 'img/logo.png' %}" alt="logo"/>
+            </a>
+        </div>
+        <div class="menu-btn-bl" onclick="toggleMenu()">
+            <svg class="menu-btn-icon">
+                <use href={% static 'img/icons.svg' %}#menu></use>
+            </svg>
+        </div>
+    </div>
+    <div class="header-block" id="menu">
+        <div class="header-logo-block" style="display: flex; justify-content: space-between">
+            <a class="header-logo-link" href="#">
+                <img class="header-logo" src="{% static 'img/logo.png' %}" alt="logo"/>
+            </a>
+            <div class="menu-btn-bl --hide --show820-flex" onclick="toggleMenu()">
+                <svg class="menu-btn-icon" style="transform: rotate(90deg)">
+                    <use href={% static 'img/icons.svg' %}#menu></use>
+                </svg>
+            </div>
+        </div>
+        <nav class="header-nav">
+
+            <ul class="header-list">
+                <li>
+                    <a class="header-link" href="#slider" onclick="closeMenu()">Главная</a>
+                </li>
+
+                <li>
+                    <a class="header-link" href="#about_us" onclick="closeMenu()">О нас</a>
+                </li>
+
+                <li>
+                    <a class="header-link" href="#products" onclick="closeMenu()">Продукция</a>
+                </li>
+                <li>
+                    <a class="header-link" href="#news" onclick="closeMenu()">Новости</a>
+                </li>
+
+
+                <li class="--ph-v-hide">
+                    <a class="header-link" href="#contacts" onclick="closeMenu()">Contacts</a>
+                </li>
+            </ul>
+            <div class="header-contact-button-bl">
+                <a class="header-gold-button" href="#contacts" onclick="closeMenu()">
+                    Контакты
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="slider-main-section" id="slider" style="background-image: url('{% static 'img/bg2_3.png' %}')">
+
+    <div class="slider-main-container">
+        <div class="slider-content-bl">
+            <p class="dom-text">Природные ресурсы > Марганцевая руда</p>
+            <h1 class="slider-big-title">
+                Продажа и поставка высококачественного сырья
+            </h1>
+            <p class="slider-descr-title">
+                Trading House Altair - это команда профессионалов, которая специализируется на поставках
+                высококачественного сырья и современного технологического оборудования...
+            </p>
+            <div class="slider-btns-bl">
+                <a class="header-gold-button" href="#contacts">
+                    Связаться с нами
+                </a>
+                <a class="header-lightblue-button" href="#about_us">
+                    Узнать больше
+                </a>
+            </div>
+        </div>
+        {#        <div class="slider-content-bl right-sl-cnt-bl">#}
+        {#            <img class="slider-image" src="{% static 'img/slider_stone1.png' %}">#}
+        {#            <div class="slider-img-info-title slider-img-info-title--blue" style="top: 150px; left: 32%">Reduction in#}
+        {#                sub-contractor costs#}
+        {#            </div>#}
+        {#            <div class="slider-img-info-title slider-img-info-title--blue" style="top: 320px; left: 150px; z-index: 5">#}
+        {#                Reduction in sub-contractor costs#}
+        {#            </div>#}
+        {#            <div class="slider-img-info-title slider-img-info-title--blue" style="top: 200px; right: 180px">Increase in#}
+        {#                productivity#}
+        {#            </div>#}
+        {#            <div class="slider-img-info-title slider-img-info-title--white" style="bottom: 350px; right: 60px;">#}
+        {#                Improvement in working capital#}
+        {#            </div>#}
+        {#            <div class="slider-img-info-title slider-img-info-title--white" style="bottom: 130px; right: 260px;">#}
+        {#                Reduction in downtime#}
+        {#            </div>#}
+        {#            <div class="slider-img-info-title slider-img-info-title--white" style="bottom: 200px; left: 180px;">#}
+        {#                Reduction in maintenance costs#}
+        {#            </div>#}
+        {##}
+        {##}
+        {#        </div>#}
+    </div>
+</section>
+
+<section class="about-us-main-section" id="about_us">
+    <div class="about-us-main-block">
+        <div class="about-us-main-content-bl --hide950">
+            <div class="about-us-main-img-bl">
+                <img class="about-us-main-img" src="{% static 'img/img1_2.png' %}" alt="about us"/>
+            </div>
+        </div>
+        <div class="about-us-main-content-bl">
+            <h1 class="black-main-title">О нашей компании</h1>
+            <p class="about-us-main-simple-text">
+                <span class="--bold-text">Trading House Altair</span> - это команда профессионалов, которая
+                специализируется на поставках высококачественного сырья и современного технологического оборудования для
+                [отрасли, в которой вы работаете]. Мы гордимся тем, что предлагаем нашим клиентам не только широкий
+                ассортимент продукции, но и индивидуальный подход, гарантирующий оптимальное решение для любого заказа.
+            </p>
+
+            <p class="about-us-main-simple-text">
+                <span class="--bold-text">Trading House Altair</span>: Ваш надежный партнер в мире сырья и
+                высокотехнологичного оборудования. Свяжитесь с нами сегодня, чтобы узнать больше о наших услугах и
+                получить индивидуальное предложение!
+            </p>
+
+            <div class="about-us-main-img-bl --hide --show950-block" style="margin-top: 30px">
+                <img class="about-us-main-img" src="{% static 'img/img1_2.png' %}" alt="about us"/>
+            </div>
+
+            <div class="about-us-main-adv-bls">
+
+                <div class="about-us-main-ad-bl">
+                    <div class="adv-icon-bl">
+                        <svg id="dump_truck_icon">
+                            <use href={% static 'img/icons.svg' %}#dump_truck></use>
+                        </svg>
+                    </div>
+                    <div class="adv-icon-title-bl">
+                        <p class="adv-title">Качество</p>
+                        <p class="adv-text">Мы сотрудничаем с проверенными поставщиками и гарантируем
+                            соответствие продукции всем необходимым стандартам.</p>
+                    </div>
+                    <div class="adv-icon-num-bl">
+                        1
+                    </div>
+                </div>
+
+                <div class="about-us-main-ad-bl">
+                    <div class="adv-icon-bl">
+                        <svg>
+                            <use href={% static 'img/icons.svg' %}#money_icon></use>
+                        </svg>
+                    </div>
+                    <div class="adv-icon-title-bl">
+                        <p class="adv-title">Цена</p>
+                        <p class="adv-text">Мы предлагаем оптимальное сочетание цены и качества, что позволяет нашим
+                            клиентам экономить средства.</p>
+                    </div>
+                    <div class="adv-icon-num-bl">
+                        2
+                    </div>
+                </div>
+
+                <div class="about-us-main-ad-bl">
+                    <div class="adv-icon-bl">
+                        <svg id="boxed_checkmark">
+                            <use href={% static 'img/icons.svg' %}#boxed_checkmark></use>
+                        </svg>
+                    </div>
+                    <div class="adv-icon-title-bl">
+                        <p class="adv-title">Надежность</p>
+                        <p class="adv-text">Мы гарантируем своевременные поставки высококачественного сырья и
+                            оборудования</p>
+                    </div>
+                    <div class="adv-icon-num-bl">
+                        3
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-products-section" id="products">
+    <h1 class="white-main-title">Наша продукция</h1>
+    <div class="main-products-section-bl">
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr1.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок ZA293</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr2.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок КУ125</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+
+
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr1.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок ZA293</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr2.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок КУ125</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr1.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок ZA293</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr2.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок КУ125</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr1.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок ZA293</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr2.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок КУ125</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr1.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок ZA293</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+
+        <div class="main-product-card">
+            <a class="main-product-card-link" href="#">
+                <img src="{% static 'img/pr2.png' %}" alt=""/>
+                <p class="main-product-card-title">Буровой станок КУ125</p>
+                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
+            </a>
+            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="news-main-section" id="news">
+    <h1 class="black-main-title">Новости</h1>
+    <div class="main-news-section-bl">
+        <div class="main-news-card">
+            <a class="main-news-card-link" href="#">
+                <img src="{% static 'img/bg1.jpg' %}" alt=""/>
+                <p class="main-news-card-title">У нас появились новости!</p>
+                <p class="main-news-card-descr">
+                    Здесь будет описание новости. Когда пользователь ищет сайт для покупки
+                    товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего
+                    обновления в разделе статей и новостей.
+                </p>
+            </a>
+            <a class="main-news-card-read-btn">22.09.2024</a>
+        </div>
+
+        <div class="main-news-card">
+            <a class="main-news-card-link" href="#">
+                <img src="{% static 'img/bg2.png' %}" alt=""/>
+                <p class="main-news-card-title">У нас появились новости!</p>
+                <p class="main-news-card-descr">
+                    Здесь будет описание новости. Когда пользователь ищет сайт для покупки
+                    товаров или заказа услуги, сайта обязательно является дата последнего
+                    обновления в разделе статей и новостей.
+                </p>
+            </a>
+            <a class="main-news-card-read-btn">21.09.2024</a>
+        </div>
+
+        <div class="main-news-card">
+            <a class="main-news-card-link" href="#">
+                <img src="{% static 'img/img1.png' %}" alt="" style="width:75%"/>
+                <p class="main-news-card-title">У нас появились новости!</p>
+                <p class="main-news-card-descr">
+                    Здесь будет описание новости. Когда пользователь ищет сайт для покупки.
+                </p>
+            </a>
+            <a class="main-news-card-read-btn">18.09.2024</a>
+        </div>
+
+        <div class="main-news-card">
+            <a class="main-news-card-link" href="#">
+                <img src="{% static 'img/bg1.jpg' %}" alt=""/>
+                <p class="main-news-card-title">У нас появились новости!</p>
+                <p class="main-news-card-descr">
+                    Здесь будет описание новости. Когда пользователь ищет сайт для покупки
+                    товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего
+                    обновления в разделе статей и новостей.
+                </p>
+            </a>
+            <a class="main-news-card-read-btn">15.09.2024</a>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="main-contacts-section" id="contacts" style="background-image: url('{% static 'img/bg3.jpg' %}')">
+    <div class="contacts-main-vector-dark"></div>
+
+    <div class="main-contacts-block">
+        <div class="main-contacts-block-content">
+
+            <h1 class="white-main-title">Контакты</h1>
+            <div class="contact-form-block">
+                <div class="contact-form-block-title">
+                    <p class="white-main-title">Оставьте заявку</p>
+                    <p class="contact-form-nnn-title">И мы вам перезвоним</p>
+                    <div class="contact-user-form-bl">
+                        <form>
+                            <input class="user-contact-form-input" type="text" placeholder="Имя"/>
+                            <input class="user-contact-form-input" type="tel" placeholder="Номер телефона"/>
+                            <input class="user-contact-form-input" type="email" placeholder="Почта"/>
+                            <input class="user-contact-form-submit" type="submit" title="Отправить"/>
+
+                        </form>
+                    </div>
+
+                    <div class="map-block" style="position:relative;overflow:hidden; height: 100%"><a
+                            href="https://yandex.uz/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+                            style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a
+                            href="https://yandex.uz/maps/213/moscow/house/sadovaya_kudrinskaya_ulitsa_2_62_35s1/Z04Ycw9lT0cPQFtvfXt0eH5kYA==/?indoorLevel=1&ll=37.585628%2C55.759274&utm_medium=mapframe&utm_source=maps&z=17.06"
+                            style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт,
+                        навигация, поиск
+                        мест</a>
+                        <iframe src="https://yandex.uz/map-widget/v1/?indoorLevel=1&ll=37.585628%2C55.759274&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcyMDI4NhJW0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCh0LDQtNC-0LLQsNGPLdCa0YPQtNGA0LjQvdGB0LrQsNGPINGD0LvQuNGG0LAsIDIvNjIvMzXRgTEiCg2wVxZCFX8JX0I%2C&z=17.06"
+                                width="100%" height="100%" frameborder="1" allowfullscreen="true"
+                                style="position:relative;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>
