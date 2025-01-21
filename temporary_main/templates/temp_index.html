@@ -2,394 +2,637 @@
 
 <!DOCTYPE html>
 <html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trading House Altair</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="{% static 'css/temprorary/style.css' %}" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trading House Altair'</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="stylesheet" href="{% static 'css/temprorary/style.css' %}">
-</head>
-
-<body>
-
-<header class="header">
-    <div class="adaptive-header-block --hide --show820-flex">
+  <body>
+    <header class="header">
+      <div class="adaptive-header-block --hide --show820-flex">
         <div class="header-logo-block" style="padding: 0 !important;">
-            <a class="header-logo-link" href="#">
-                <img class="header-logo" src="{% static 'img/logo.png' %}" alt="logo"/>
-            </a>
+          <a class="header-logo-link"><img class="header-logo" src="{% static 'img/logo.png' %}" alt="logo" href="#" /></a>
         </div>
         <div class="menu-btn-bl" onclick="toggleMenu()">
-            <svg class="menu-btn-icon">
-                <use href={% static 'img/icons.svg' %}#menu></use>
-            </svg>
+          <svg class="menu-btn-icon">
+            <use href="{% static 'img/icons.svg' %}#menu"></use>
+          </svg>
         </div>
-    </div>
-    <div class="header-block" id="menu">
+      </div>
+      <div class="header-block" id="menu">
         <div class="header-logo-block" style="display: flex; justify-content: space-between">
-            <a class="header-logo-link" href="#">
-                <img class="header-logo" src="{% static 'img/logo.png' %}" alt="logo"/>
-            </a>
-            <div class="menu-btn-bl --hide --show820-flex" onclick="toggleMenu()">
-                <svg class="menu-btn-icon" style="transform: rotate(90deg)">
-                    <use href={% static 'img/icons.svg' %}#menu></use>
-                </svg>
-            </div>
+          <a class="header-logo-link" href="#"><img class="header-logo" src="{% static 'img/logo.png' %}" alt="logo" /></a>
+          <div class="menu-btn-bl --hide --show820-flex" onclick="toggleMenu()">
+            <svg class="menu-btn-icon" style="transform: rotate(90deg)">
+              <use href="{% static 'img/icons.svg' %}#menu"></use>
+            </svg>
+          </div>
         </div>
         <nav class="header-nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="#slider" onclick="closeMenu()">Главная</a>
+            </li>
 
-            <ul class="header-list">
-                <li>
-                    <a class="header-link" href="#slider" onclick="closeMenu()">Главная</a>
-                </li>
+            <li>
+              <a class="nav-link" href="#about_us" onclick="closeMenu()">О нас</a>
+            </li>
 
-                <li>
-                    <a class="header-link" href="#about_us" onclick="closeMenu()">О нас</a>
-                </li>
+            <li>
+              <a class="nav-link" href="#documents" onclick="closeMenu()">Документы</a>
+            </li>
 
-                <li>
-                    <a class="header-link" href="#products" onclick="closeMenu()">Продукция</a>
-                </li>
-                <li>
-                    <a class="header-link" href="#news" onclick="closeMenu()">Новости</a>
-                </li>
+            <li>
+              <a class="nav-link" href="#logistics" onclick="closeMenu()">Логистика</a>
+            </li>
 
+            <li>
+              <a class="nav-link" href="#products" onclick="closeMenu()">Продукция</a>
+            </li>
 
-                <li class="--ph-v-hide">
-                    <a class="header-link" href="#contacts" onclick="closeMenu()">Contacts</a>
-                </li>
-            </ul>
-            <div class="header-contact-button-bl">
-                <a class="header-gold-button" href="#contacts" onclick="closeMenu()">
-                    Контакты
-                </a>
-            </div>
+            <li>
+              <a class="nav-link" href="#news" onclick="closeMenu()">Новости</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#vacansy" onclick="closeMenu()">Вакансии</a>
+            </li>
+
+            <li class="--ph-v-hide">
+              <a class="nav-link" href="#contacts" onclick="closeMenu()">Contacts</a>
+            </li>
+          </ul>
+          <div class="header-contact-button-bl">
+            <a class="header-gold-button" href="#contacts" onclick="closeMenu()">Контакты</a>
+          </div>
         </nav>
-    </div>
-</header>
+      </div>
+    </header>
 
-<section class="slider-main-section" id="slider" style="background-image: url('{% static 'img/bg2_3.png' %}')">
-
-    <div class="slider-main-container">
+    <section class="slider-main-section" id="slider" style="background-image: url('{% static 'img/bg-slider.webp' %}')">
+      <div class="slider-main-container">
         <div class="slider-content-bl">
-            <p class="dom-text">Природные ресурсы > Марганцевая руда</p>
-            <h1 class="slider-big-title">
-                Продажа и поставка высококачественного сырья
-            </h1>
-            <p class="slider-descr-title">
-                Trading House Altair - это команда профессионалов, которая специализируется на поставках
-                высококачественного сырья и современного технологического оборудования...
-            </p>
-            <div class="slider-btns-bl">
-                <a class="header-gold-button" href="#contacts">
-                    Связаться с нами
-                </a>
-                <a class="header-lightblue-button" href="#about_us">
-                    Узнать больше
-                </a>
-            </div>
+          <p class="dom-text">Природные ресурсы > Марганцевая руда</p>
+          <h1 class="slider-big-title">Поставка редкоземельного сырья с отчественных и зарубежных месторождений</h1>
+          <p class="slider-descr-title">Trading House Altair: Ваш надежный партнер в поставке редкоземельного сырья и оборудования.</p>
+          <div class="slider-btns-bl">
+            <a class="header-gold-button" href="#contacts">Связаться с нами</a>
+            <a class="header-lightblue-button" href="#about_us">Узнать больше</a>
+          </div>
         </div>
-        {#        <div class="slider-content-bl right-sl-cnt-bl">#}
-        {#            <img class="slider-image" src="{% static 'img/slider_stone1.png' %}">#}
-        {#            <div class="slider-img-info-title slider-img-info-title--blue" style="top: 150px; left: 32%">Reduction in#}
-        {#                sub-contractor costs#}
-        {#            </div>#}
-        {#            <div class="slider-img-info-title slider-img-info-title--blue" style="top: 320px; left: 150px; z-index: 5">#}
-        {#                Reduction in sub-contractor costs#}
-        {#            </div>#}
-        {#            <div class="slider-img-info-title slider-img-info-title--blue" style="top: 200px; right: 180px">Increase in#}
-        {#                productivity#}
-        {#            </div>#}
-        {#            <div class="slider-img-info-title slider-img-info-title--white" style="bottom: 350px; right: 60px;">#}
-        {#                Improvement in working capital#}
-        {#            </div>#}
-        {#            <div class="slider-img-info-title slider-img-info-title--white" style="bottom: 130px; right: 260px;">#}
-        {#                Reduction in downtime#}
-        {#            </div>#}
-        {#            <div class="slider-img-info-title slider-img-info-title--white" style="bottom: 200px; left: 180px;">#}
-        {#                Reduction in maintenance costs#}
-        {#            </div>#}
-        {##}
-        {##}
-        {#        </div>#}
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="about-us-main-section" id="about_us">
-    <div class="about-us-main-block">
+    <section class="about-us-main-section" id="about_us">
+      <div class="about-us-main-block">
         <div class="about-us-main-content-bl --hide950">
-            <div class="about-us-main-img-bl">
-                <img class="about-us-main-img" src="{% static 'img/img1_2.png' %}" alt="about us"/>
-            </div>
+          <div class="about-us-main-img-bl">
+            <img class="about-us-main-img" src="{% static 'img/about-us.webp' %}" alt="about us" />
+          </div>
         </div>
         <div class="about-us-main-content-bl">
-            <h1 class="black-main-title">О нашей компании</h1>
-            <p class="about-us-main-simple-text">
-                <span class="--bold-text">Trading House Altair</span> - это команда профессионалов, которая
-                специализируется на поставках высококачественного сырья и современного технологического оборудования для
-                [отрасли, в которой вы работаете]. Мы гордимся тем, что предлагаем нашим клиентам не только широкий
-                ассортимент продукции, но и индивидуальный подход, гарантирующий оптимальное решение для любого заказа.
-            </p>
+          <h1 class="black-main-title">О нашей компании</h1>
+          <p class="main-simple-text">
+            <span class="--bold-text">Trading House Altair</span> -  компания с многолетней историей, специализирующаяся на поставках сырья для металлургической промышленности крупным металлургическим комбинатам. Мы обладаем богатым опытом и  долгосрочным струдничеством с производителями с по всему миру, а также имеем высочайшее экспертизу в части добычи и поставок марганцевой руды  и сопутствующих продуктов.
+          </p>
 
-            <p class="about-us-main-simple-text">
-                <span class="--bold-text">Trading House Altair</span>: Ваш надежный партнер в мире сырья и
-                высокотехнологичного оборудования. Свяжитесь с нами сегодня, чтобы узнать больше о наших услугах и
-                получить индивидуальное предложение!
-            </p>
+          <p class="main-simple-text">
+            <span class="--bold-text">Качество, подтвержденное опытом!</span>
+          </p>
 
-            <div class="about-us-main-img-bl --hide --show950-block" style="margin-top: 30px">
-                <img class="about-us-main-img" src="{% static 'img/img1_2.png' %}" alt="about us"/>
+          <div class="about-us-main-img-bl --hide --show950-block" style="margin-top: 30px">
+            <img class="about-us-main-img" src="{% static 'img/about-us.webp' %}" alt="about us" />
+          </div>
+
+          <div class="about-us-main-adv-bls">
+            <div class="about-us-main-ad-bl">
+              <div class="adv-icon-bl">
+                <svg id="dump_truck_icon">
+                  <use href="{% static 'img/icons.svg' %}#dump_truck"></use>
+                </svg>
+              </div>
+              <div class="adv-icon-title-bl">
+                <p class="adv-title">Качество</p>
+                <p class="adv-text"> Мы поставляем марганцевую руду высочайшего качества, добываемую на лучших рудниках.</p>
+              </div>
+              <div class="adv-icon-num-bl">1</div>
             </div>
 
-            <div class="about-us-main-adv-bls">
-
-                <div class="about-us-main-ad-bl">
-                    <div class="adv-icon-bl">
-                        <svg id="dump_truck_icon">
-                            <use href={% static 'img/icons.svg' %}#dump_truck></use>
-                        </svg>
-                    </div>
-                    <div class="adv-icon-title-bl">
-                        <p class="adv-title">Качество</p>
-                        <p class="adv-text">Мы сотрудничаем с проверенными поставщиками и гарантируем
-                            соответствие продукции всем необходимым стандартам.</p>
-                    </div>
-                    <div class="adv-icon-num-bl">
-                        1
-                    </div>
-                </div>
-
-                <div class="about-us-main-ad-bl">
-                    <div class="adv-icon-bl">
-                        <svg>
-                            <use href={% static 'img/icons.svg' %}#money_icon></use>
-                        </svg>
-                    </div>
-                    <div class="adv-icon-title-bl">
-                        <p class="adv-title">Цена</p>
-                        <p class="adv-text">Мы предлагаем оптимальное сочетание цены и качества, что позволяет нашим
-                            клиентам экономить средства.</p>
-                    </div>
-                    <div class="adv-icon-num-bl">
-                        2
-                    </div>
-                </div>
-
-                <div class="about-us-main-ad-bl">
-                    <div class="adv-icon-bl">
-                        <svg id="boxed_checkmark">
-                            <use href={% static 'img/icons.svg' %}#boxed_checkmark></use>
-                        </svg>
-                    </div>
-                    <div class="adv-icon-title-bl">
-                        <p class="adv-title">Надежность</p>
-                        <p class="adv-text">Мы гарантируем своевременные поставки высококачественного сырья и
-                            оборудования</p>
-                    </div>
-                    <div class="adv-icon-num-bl">
-                        3
-                    </div>
-                </div>
-
+            <div class="about-us-main-ad-bl">
+              <div class="adv-icon-bl">
+                <svg id="boxed_checkmark">
+                  <use href="{% static 'img/icons.svg' %}#boxed_checkmark"></use>
+                </svg>
+              </div>
+              <div class="adv-icon-title-bl">
+                <p class="adv-title">Надежность</p>
+                <p class="adv-text">Каждый этап работы, от выбора руды до поставки клиенту, контролируется нашей экспертной командой.</p>
+              </div>
+              <div class="adv-icon-num-bl">2</div>
             </div>
-        </div>
-    </div>
-</section>
 
-<section class="main-products-section" id="products">
-    <h1 class="white-main-title">Наша продукция</h1>
-    <div class="main-products-section-bl">
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr1.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок ZA293</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+            <div class="about-us-main-ad-bl">
+              <div class="adv-icon-bl">
+                <svg>
+                  <use href="{% static 'img/icons.svg' %}#group"></use>
+                </svg>
+              </div>
+              <div class="adv-icon-title-bl">
+                <p class="adv-title">Нас выбирают</p>
+                <p class="adv-text">Мы гордимся своей репутацией на внутреннем и внешнем рынках, завоеванной за счет неизменного качества, надежности и профессионализма.</p>
+              </div>
+              <div class="adv-icon-num-bl">3</div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr2.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок КУ125</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
-        </div>
-
-
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr1.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок ZA293</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
-        </div>
-
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr2.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок КУ125</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
-        </div>
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr1.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок ZA293</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+    <section class="main-documents-section" id="documents">
+      <h1 class="white-main-title">Документы</h1>
+      <div class="documents-list-block">
+        <div class="document-card">
+          <a class="document-link" href="{% static 'documents/Бланк THA.pdf' %}" target="_blank" download>
+            <div class="document-card-content">
+              <div class="doc-icon-block">
+                <svg class="doc-icon">
+                  <use href="{% static 'img/icons.svg' %}#pdf_file_download"></use>
+                </svg>
+              </div>
+              <div class="doc-title-block">Название документа компании</div>
+              <div class="doc-descr-block">Здесь будет описание документа. При нажатии на кнопку, файл открывается в соседнем окне</div>
+              <div class="doc-extantion-block"></div>
+            </div>
+          </a>
         </div>
 
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr2.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок КУ125</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
-        </div>
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr1.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок ZA293</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        <div class="document-card">
+          <a class="document-link" href="{% static 'documents/Бланк THA.pdf' %}" target="_blank" download>
+            <div class="document-card-content">
+              <div class="doc-icon-block">
+                <svg class="doc-icon">
+                  <use href="{% static 'img/icons.svg' %}#pdf_file_download"></use>
+                </svg>
+              </div>
+              <div class="doc-title-block">Название документа компании</div>
+              <div class="doc-descr-block">Здесь будет описание документа. При нажатии на кнопку, файл открывается в соседнем окне</div>
+              <div class="doc-extantion-block"></div>
+            </div>
+          </a>
         </div>
 
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr2.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок КУ125</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
-        </div>
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr1.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок ZA293</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        <div class="document-card">
+          <a class="document-link" href="{% static 'documents/Бланк THA.pdf' %}" target="_blank" download>
+            <div class="document-card-content">
+              <div class="doc-icon-block">
+                <svg class="doc-icon">
+                  <use href="{% static 'img/icons.svg' %}#pdf_file_download"></use>
+                </svg>
+              </div>
+              <div class="doc-title-block">Название документа компании</div>
+              <div class="doc-descr-block">Здесь будет описание документа. При нажатии на кнопку, файл открывается в соседнем окне</div>
+              <div class="doc-extantion-block"></div>
+            </div>
+          </a>
         </div>
 
-        <div class="main-product-card">
-            <a class="main-product-card-link" href="#">
-                <img src="{% static 'img/pr2.png' %}" alt=""/>
-                <p class="main-product-card-title">Буровой станок КУ125</p>
-                <p class="main-product-card-descr">Буровой станок с интегрированным компрессором</p>
-            </a>
-            <a class="main-product-card-order-btn" href="#contacts">Заказать</a>
+        <div class="document-card">
+          <a class="document-link" href="{% static 'documents/Бланк THA.pdf' %}" target="_blank" download>
+            <div class="document-card-content">
+              <div class="doc-icon-block">
+                <svg class="doc-icon">
+                  <use href="{% static 'img/icons.svg' %}#pdf_file_download"></use>
+                </svg>
+              </div>
+              <div class="doc-title-block">Название документа компании</div>
+              <div class="doc-descr-block">Здесь будет описание документа. При нажатии на кнопку, файл открывается в соседнем окне</div>
+              <div class="doc-extantion-block"></div>
+            </div>
+          </a>
         </div>
 
-    </div>
-</section>
+        <div class="document-card">
+          <a class="document-link" href="{% static 'documents/Бланк THA.pdf' %}" target="_blank" download>
+            <div class="document-card-content">
+              <div class="doc-icon-block">
+                <svg class="doc-icon">
+                  <use href="{% static 'img/icons.svg' %}#pdf_file_download"></use>
+                </svg>
+              </div>
+              <div class="doc-title-block">Название документа компании</div>
+              <div class="doc-descr-block">Здесь будет описание документа. При нажатии на кнопку, файл открывается в соседнем окне</div>
+              <div class="doc-extantion-block"></div>
+            </div>
+          </a>
+        </div>
 
-<section class="news-main-section" id="news">
-    <h1 class="black-main-title">Новости</h1>
-    <div class="main-news-section-bl">
-        <div class="main-news-card">
-            <a class="main-news-card-link" href="#">
-                <img src="{% static 'img/bg1.jpg' %}" alt=""/>
-                <p class="main-news-card-title">У нас появились новости!</p>
-                <p class="main-news-card-descr">
-                    Здесь будет описание новости. Когда пользователь ищет сайт для покупки
-                    товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего
-                    обновления в разделе статей и новостей.
+        <div class="document-card">
+          <a class="document-link" href="{% static 'documents/Бланк THA.pdf' %}" target="_blank" download>
+            <div class="document-card-content">
+              <div class="doc-icon-block">
+                <svg class="doc-icon">
+                  <use href="{% static 'img/icons.svg' %}#pdf_file_download"></use>
+                </svg>
+              </div>
+              <div class="doc-title-block">Название документа компании</div>
+              <div class="doc-descr-block">Здесь будет описание документа. При нажатии на кнопку, файл открывается в соседнем окне</div>
+              <div class="doc-extantion-block"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="document-card">
+          <a class="document-link" href="{% static 'documents/Бланк THA.pdf' %}" target="_blank" download>
+            <div class="document-card-content">
+              <div class="doc-icon-block">
+                <svg class="doc-icon">
+                  <use href="{% static 'img/icons.svg' %}#pdf_file_download"></use>
+                </svg>
+              </div>
+              <div class="doc-title-block">Название документа компании</div>
+              <div class="doc-descr-block">Здесь будет описание документа. При нажатии на кнопку, файл открывается в соседнем окне</div>
+              <div class="doc-extantion-block"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="logistics-main-section" id="logistics">
+      <h1 class="black-main-title">Не просто поставка, а партнерство</h1>
+      <div class="logistics-section-bl">
+        <div class="logistics-text-block">
+          <p class="main-simple-text">
+            <span class="--bold-text">Trading House Altair</span> - это не просто поставщик сырья, а надежный партнер, который всегда готов помочь вам:
+          </p>
+          <p class="main-simple-text">
+            <span class="--bold-text">Профессиональная консультация:</span> Наши эксперты готовы поделиться своим опытом и знаниями, помогая вам выбрать оптимальный тип руды для ваших нужд.
+          </p>
+          <p class="main-simple-text">
+            <span class="--bold-text">Индивидуальный подход:</span> Мы не предлагаем стандартные решения, а создаем индивидуальные предложения для каждого клиента.
+          </p>
+          <p class="main-simple-text">
+            <span class="--bold-text">Своевременная доставка:</span> Мы гарантируем своевременную доставку продукции в соответствии с согласованным графиком.
+          </p>
+          <p class="main-simple-text">Сотрудничество с Trading House Altair - это уверенность в высоком качестве продукции, выгодных ценах, удобстве и надежности. </p>
+          <p class="main-simple-text --bold-text">Свяжитесь с нами сегодня, чтобы узнать больше о наших услугах и получить индивидуальное предложение!</p>
+        </div>
+
+        {% comment %} <div class="logistics-smart-img">
+          <div class="logistics-img-cont">
+            <img src="{% static 'img/logistika2.jpg' %}" class="logistics-img" id="logistics-smart-img" alt="logistics" />
+          </div>
+
+          <div class="logistics-img-cntr-btns">
+            <a id="prevStep"><</a>
+            <a id="label-info">Карта</a>
+            <a id="nextStep">></a>
+          </div>
+        </div> {% endcomment %}
+      </div>
+    </section>
+
+    <section class="main-products-section" id="products">
+      <h1 class="white-main-title">Реализуемая продукция</h1>
+      <div class="main-products-section-bl">
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/1.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">Ферросилиций (FeSi)</p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list">
+                  <li>Ферросилиций ФС20</li>
+                  <li>Ферросилиций ФС25</li>
+                  <li>Ферросилиций ФС65</li>
+                  <li>Ферросилиций ФС70</li>
+                  <li>Ферросилиций ФС75</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/2.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">Ферросиликомарганец (FeSiMn, Mn 65% min)</p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list">
+                  <li>Ферросиликомарганец МнС17 (РА)</li>
+                  <li>Ферросиликомарганец МнС17 (РБ)</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/3.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">Ферромарганец (FeMn)</p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list">
+                  <li>Ферромарганец ФМн78</li>
+                  <li>Ферромарганец ФМн80</li>
+                  <li>Ферромарганец ФМн88</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/4.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">Феррохром (FeCr)</p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list">
+                  <li>Ферросилиций ФС20</li>
+                  <li>Ферросилиций ФС25</li>
+                  <li>Ферросилиций ФС65</li>
+                  <li>Ферросилиций ФС70</li>
+                  <li>Ферросилиций ФС75</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/5.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">Раскислители марок ККФ, ККК</p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list"></ul>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/6.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">Раскислители марок ККФ, ККК</p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list"></ul>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/7.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">
+                  Марганцевая руда Концентрат марганцевый<br />Mn < 38%
                 </p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list"></ul>
+              </div>
             </a>
-            <a class="main-news-card-read-btn">22.09.2024</a>
+          </div>
+        </div>
+
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/8.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">Барит (BaSO4)</p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list"></ul>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card-inner">
+          <div class="product-image" style="background-image: url({% static 'img/products/9.webp' %})"></div>
+          <div class="card-content">
+            <a class="product-card-link">
+              <div class="product-name-block">
+                <p class="product-name">Микрокремнезем (SiO2)</p>
+              </div>
+              <div class="product-variants-block">
+                <ul class="product-variants-list"></ul>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-main-section" id="news">
+      <h1 class="black-main-title">Новости</h1>
+      <div class="main-news-section-bl">
+        <div class="main-news-card">
+          <a class="main-news-card-link">
+            <img src="{% static 'img/bg-contact.webp' %}" alt="" />
+            <p class="main-news-card-title">У нас появились новости!</p>
+            <div>
+              <p class="main-news-card-descr">
+                Здесь будет описание новости. Когда пользователь ищет сайт для покупки товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего обновления в разделе статей и новостей. обновления в разделе статей и новостей.
+                <br />
+                <br />
+                Когда пользователь ищет сайт для покупки товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего обновления в разделе статей и ности. Когда пользователь ищет сайт для покупки товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего обновления в разделе статей и но
+              </p>
+            </div>
+          </a>
+          <a class="main-news-card-read-btn">22.09.2024</a>
         </div>
 
         <div class="main-news-card">
-            <a class="main-news-card-link" href="#">
-                <img src="{% static 'img/bg2.png' %}" alt=""/>
-                <p class="main-news-card-title">У нас появились новости!</p>
-                <p class="main-news-card-descr">
-                    Здесь будет описание новости. Когда пользователь ищет сайт для покупки
-                    товаров или заказа услуги, сайта обязательно является дата последнего
-                    обновления в разделе статей и новостей.
-                </p>
-            </a>
-            <a class="main-news-card-read-btn">21.09.2024</a>
+          <a class="main-news-card-link">
+            <img src="{% static 'img/bg-slider.webp' %}" alt="" />
+            <p class="main-news-card-title">У нас появились новости!</p>
+            <div>
+              <p class="main-news-card-descr">Здесь будет описание новости. Когда пользователь ищет сайт для покупки товаров или заказа услуги, сайта обязательно является дата последнего обновления в разделе статей и новостей.</p>
+            </div>
+          </a>
+          <a class="main-news-card-read-btn">21.09.2024</a>
         </div>
 
         <div class="main-news-card">
-            <a class="main-news-card-link" href="#">
-                <img src="{% static 'img/img1.png' %}" alt="" style="width:75%"/>
-                <p class="main-news-card-title">У нас появились новости!</p>
-                <p class="main-news-card-descr">
-                    Здесь будет описание новости. Когда пользователь ищет сайт для покупки.
-                </p>
-            </a>
-            <a class="main-news-card-read-btn">18.09.2024</a>
+          <a class="main-news-card-link">
+            <img src="{% static 'img/about-us.webp' %}" alt="" style="width:75%" />
+            <p class="main-news-card-title">У нас появились новости!</p>
+            <div>
+              <p class="main-news-card-descr">Здесь будет описание новости. Когда пользователь ищет сайт для покупки.</p>
+            </div>
+          </a>
+          <a class="main-news-card-read-btn">18.09.2024</a>
         </div>
 
         <div class="main-news-card">
-            <a class="main-news-card-link" href="#">
-                <img src="{% static 'img/bg1.jpg' %}" alt=""/>
-                <p class="main-news-card-title">У нас появились новости!</p>
-                <p class="main-news-card-descr">
-                    Здесь будет описание новости. Когда пользователь ищет сайт для покупки
-                    товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего
-                    обновления в разделе статей и новостей.
-                </p>
-            </a>
-            <a class="main-news-card-read-btn">15.09.2024</a>
+          <a class="main-news-card-link">
+            <img src="{% static 'img/bg-contact.webp' %}" alt="" />
+            <p class="main-news-card-title">У нас появились новости!</p>
+            <div>
+              <p class="main-news-card-descr">
+                Здесь будет описание новости. Когда пользователь ищет сайт для покупки товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего обновления в разделе статей и новостей.
+                <br />
+                <br />
+                Когда пользователь ищет сайт для покупки товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего обновления в разделе статей и ности. Когда пользователь ищет сайт для покупки товаров или заказа услуги, для него показателем жизни сайта обязательно является дата последнего обновления в разделе статей и но
+              </p>
+            </div>
+          </a>
+          <a class="main-news-card-read-btn">15.09.2024</a>
         </div>
+      </div>
+    </section>
 
+    <section class="logistics-main-section" id="vacansy">
+      <h1 class="black-main-title">Вакансии</h1>
+      <div class="vacancy-block">
+       <div class="gold-title-text">Присоединяйтесь к нам — посмотрите вакансии и найдите работу мечты!</div>
+       <a class="header-gold-button" href="#contacts" onclick="closeMenu()">Узнать о вакансиях</a>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-<section class="main-contacts-section" id="contacts" style="background-image: url('{% static 'img/bg3.jpg' %}')">
-    <div class="contacts-main-vector-dark"></div>
-
-    <div class="main-contacts-block">
+    <section class="main-contacts-section" id="contacts" style="background-image: url('{% static 'img/bg-contact.webp' %}')">
+      <div class="main-contacts-block">
         <div class="main-contacts-block-content">
+          <h1 class="white-main-title">Контакты</h1>
+          <div class="contact-form-block">
+            <div class="contact-form-block-title">
+              <p class="white-main-title">Оставьте заявку</p>
+              <p class="contact-form-nnn-title">И мы вам перезвоним</p>
+              <div class="contact-user-form-bl">
+                <form>
+                  <input class="user-contact-form-input" type="text" placeholder="Имя" />
+                  <input class="user-contact-form-input" type="tel" placeholder="Номер телефона" />
+                  <input class="user-contact-form-input" type="email" placeholder="Почта" />
+                  <input class="user-contact-form-submit" type="submit" title="Отправить" />
+                </form>
+              </div>
 
-            <h1 class="white-main-title">Контакты</h1>
-            <div class="contact-form-block">
-                <div class="contact-form-block-title">
-                    <p class="white-main-title">Оставьте заявку</p>
-                    <p class="contact-form-nnn-title">И мы вам перезвоним</p>
-                    <div class="contact-user-form-bl">
-                        <form>
-                            <input class="user-contact-form-input" type="text" placeholder="Имя"/>
-                            <input class="user-contact-form-input" type="tel" placeholder="Номер телефона"/>
-                            <input class="user-contact-form-input" type="email" placeholder="Почта"/>
-                            <input class="user-contact-form-submit" type="submit" title="Отправить"/>
-
-                        </form>
-                    </div>
-
-                    <div class="map-block" style="position:relative;overflow:hidden; height: 100%"><a
-                            href="https://yandex.uz/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
-                            style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a
-                            href="https://yandex.uz/maps/213/moscow/house/sadovaya_kudrinskaya_ulitsa_2_62_35s1/Z04Ycw9lT0cPQFtvfXt0eH5kYA==/?indoorLevel=1&ll=37.585628%2C55.759274&utm_medium=mapframe&utm_source=maps&z=17.06"
-                            style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт,
-                        навигация, поиск
-                        мест</a>
-                        <iframe src="https://yandex.uz/map-widget/v1/?indoorLevel=1&ll=37.585628%2C55.759274&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcyMDI4NhJW0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCh0LDQtNC-0LLQsNGPLdCa0YPQtNGA0LjQvdGB0LrQsNGPINGD0LvQuNGG0LAsIDIvNjIvMzXRgTEiCg2wVxZCFX8JX0I%2C&z=17.06"
-                                width="100%" height="100%" frameborder="1" allowfullscreen="true"
-                                style="position:relative;"></iframe>
-                    </div>
-                </div>
+              <div class="map-block" style="position:relative;overflow:hidden; height: 40%">
+                <a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/ulitsa_bolshaya_ordynka_53/Z04YcAVkT0UBQFtvfXtycnhiZQ==/?ll=37.624606%2C55.733412&utm_medium=mapframe&utm_source=maps&z=17.06" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Большая Ордынка, 53 — Яндекс Карты</a>
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.624606%2C55.733412&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY5NzA0MBJI0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JHQvtC70YzRiNCw0Y8g0J7RgNC00YvQvdC60LAsIDUzIgoNmH8WQhUD715C&z=17.06" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<script src="{% static 'js/index.js' %}"></script>
+    <section class="footer-section">
+      <div class="footer-block">
+        <div class="footer-nav-bl --hide820">
+          <nav class="footer-nav">
+            <ul class="nav-list">
+              <li>
+                <a class="nav-link" href="#">Главная</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#about_us">О нас</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#about_us">Документы</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#logistics">Логистика</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#products">Продукция</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#news">Новости</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#vacansy">Вакансии</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-</body>
+        <div class="footer-contacts-block">
+          <div class="ft-contacts-card">
+            <div class="ft-cnts-card-icon-bl">
+              <a href="tel:+71231234567">
+                <svg class="ft-cnt-icon">
+                  <use href="{% static 'img/icons.svg' %}#phone_2"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="ft-cnts-card-title-bl">
+              <p>Телефон</p>
+            </div>
+
+            <div class="ft-cnts-card-content-bl">
+              <a href="tel:+71231234567">+7 (123) 123 45 67</a>
+            </div>
+            <div class="ft-cnts-card-title-bl">
+              <p class="footer-hint-text">Звонки принимаются с 10:00-18.00</p>
+              <p class="footer-hint-text">Рабочие дни: пн-пт</p>
+            </div>
+          </div>
+
+          <div class="ft-contacts-card">
+            <div class="ft-cnts-card-icon-bl">
+              <a href="mailto:mymail@examlple.ru">
+                <svg class="ft-cnt-icon">
+                  <use href="{% static 'img/icons.svg' %}#mail"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="ft-cnts-card-title-bl">
+              <p>Почта</p>
+            </div>
+            <div class="ft-cnts-card-content-bl">
+              <a href="mailto:mymail@examlple.ru">mymail@examlple.ru</a>
+            </div>
+          </div>
+
+          <div class="ft-contacts-card">
+            <div class="ft-cnts-card-icon-bl">
+              <a href="https://yandex.ru/maps/-/CDH-BO17" target="_blank">
+                <svg class="ft-cnt-icon">
+                  <use href="{% static 'img/icons.svg' %}#location"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="ft-cnts-card-title-bl">
+              <p>Адрес</p>
+            </div>
+            <div class="ft-cnts-card-content-bl">
+              <a href="https://yandex.ru/maps/-/CDH-BO17" target="_blank">Россия, Москва, 115184 Большая Ордынка 53c1/1</a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-block">Copyright © 2024 Trading House Altair</div>
+      </div>
+    </section>
+
+    <script src="{% static 'js/index.js' %}"></script>
+  </body>
 </html>
